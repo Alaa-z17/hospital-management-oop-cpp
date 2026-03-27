@@ -1,0 +1,16 @@
+# Auto-generated data files
+Data/patients.txt
+Data/doctors.txt
+Data/appointments.txt
+
+# Visual Studio
+.vs/
+*.user
+Debug/
+Release/
+x64/
+x86/
+*.aps
+*.suo
+*.db
+*.opendb
