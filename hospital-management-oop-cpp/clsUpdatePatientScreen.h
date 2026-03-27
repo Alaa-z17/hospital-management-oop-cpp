@@ -6,11 +6,9 @@
 
 class clsUpdatePatientScreen : public clsScreen
 {
-
-public:
-    void show() override
+private:
+    clsPatient _ReadPatientInfo()
     {
-        _showHeader("Update Patient");
 
         string patientID = _readPatientID();
         int index = clsPatientData::findPatientIndex(patientID);
@@ -48,8 +46,16 @@ public:
 
             string bloodType = clsInputValidate<string>::ReadString("Enter Blood Type (current: " + patient.getBloodType() + "): ");
             if (!bloodType.empty()) patient.setBloodType(bloodType);
+            return patient;
+        }
+    }
+public:
+    void show() override
+    {
+        _showHeader("Update Patient");
 
-            if (clsPatientData::updatePatient(patient))
+
+            if (clsPatientData::updatePatient(_ReadPatientInfo()))
             {
                 cout << "\nPatient updated successfully.\n";
             }
@@ -57,7 +63,7 @@ public:
             {
                 cout << "\nError: Could not update patient.\n";
             }
-        }
+        
 
         _pauseScreen();
     }

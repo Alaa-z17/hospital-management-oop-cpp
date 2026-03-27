@@ -36,6 +36,14 @@ protected:
         id = clsInputValidate<string>::ReadString();
         return id;
     }
+    //Doctor
+    static string _readDoctorID()
+    {
+        string id;
+        cout << "Enter Doctor ID: ";
+        getline(cin, id);
+        return id;
+    }
 public:
     // Pure virtual function to be overridden by each screen
     virtual void show() = 0;

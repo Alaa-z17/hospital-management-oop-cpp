@@ -1,4 +1,5 @@
-#pragma once
+#ifndef __CLSSTRING_H__
+#define __CLSSTRING_H__
 
 #include <iostream>
 #include <vector>
@@ -513,3 +514,4 @@ public:
 
 
 };
+#endif // __CLSSTRING_H__

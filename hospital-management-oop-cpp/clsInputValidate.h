@@ -56,6 +56,7 @@ public:
 
 	static T ReadNumberBetween(string Message = "Enter Number between: " + to_string(From) + " and " + to_string(To), T From, T To, string ErrorMessage = "Number is not within range, Enter again:\n")
 	{
+		if(Message != "")
 		cout << Message;
 		T Number = ReadNumber();
 
