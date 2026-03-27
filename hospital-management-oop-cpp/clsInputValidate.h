@@ -1,19 +1,17 @@
-#ifndef __CLSINPUTVALIDATE_H__
-#define __CLSINPUTVALIDATE_H__
 
+#pragma once
 #include <iostream>
 #include <string>
 #include "clsString.h"
 #include "clsDate.h"
-#include <iomanip>
 #include <regex>
 
-class clsInputValidate
+template <class T> class clsInputValidate
 {
 
 public:
 
-	static bool IsNumberBetween(int Number, int From, int To)
+	static bool IsNumberBetween(T Number, T From, T To)
 	{
 		if (Number >= From && Number <= To)
 			return true;
@@ -21,15 +19,6 @@ public:
 			return false;
 
 	}
-
-	static bool IsNumberBetween(double Number, double From, double To)
-	{
-		if (Number >= From && Number <= To)
-			return true;
-		else
-			return false;
-	}
-
 	static bool IsDateBetween(clsDate Date, clsDate From, clsDate To)
 	{
 		//Date>=From && Date<=To
@@ -54,9 +43,9 @@ public:
 	}
 
 
-	static short ReadShortNumber(string ErrorMessage = "Invalid Number, Enter again\n")
+	static T ReadNumber(string ErrorMessage = "Invalid Number, Enter again\n")
 	{
-		short Number;
+		T Number;
 		while (!(cin >> Number)) {
 			cin.clear();
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
@@ -65,92 +54,27 @@ public:
 		return Number;
 	}
 
-	static int ReadIntNumber(string ErrorMessage = "Invalid Number, Enter again\n")
+	static T ReadNumberBetween(string Message = "Enter Number between: " + to_string(From) + " and " + to_string(To), T From, T To, string ErrorMessage = "Number is not within range, Enter again:\n")
 	{
-		int Number;
-		while (!(cin >> Number)) {
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cout << ErrorMessage;
-		}
-		return Number;
-	}
-
-	static short ReadShortNumberBetween(short From, short To, string ErrorMessage = "Number is not within range, Enter again:\n")
-	{
-		int Number = ReadShortNumber();
+		cout << Message;
+		T Number = ReadNumber();
 
 		while (!IsNumberBetween(Number, From, To))
 		{
 			cout << ErrorMessage;
-			Number = ReadShortNumber();
+			Number = ReadNumber();
 		}
 		return Number;
 	}
 
-	static int ReadIntNumberBetween(int From, int To, string ErrorMessage = "Number is not within range, Enter again:\n")
+	static T ReadPositiveNumber(string ErrorMessage = "Invalid Number, Enter again\n")
 	{
-		int Number = ReadIntNumber();
-
-		while (!IsNumberBetween(Number, From, To))
-		{
-			cout << ErrorMessage;
-			Number = ReadIntNumber();
-		}
-		return Number;
-	}
-
-	static float ReadFloatNumber(string ErrorMessage = "Invalid Number, Enter again\n")
-	{
-		float Number;
-		while (!(cin >> Number)) {
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cout << ErrorMessage;
-		}
-		return Number;
-	}
-
-	static double ReadFloatNumberBetween(double From, double To, string ErrorMessage = "Number is not within range, Enter again:\n")
-	{
-		double Number = ReadFloatNumber();
-
-		while (!IsNumberBetween(Number, From, To)) {
-			cout << ErrorMessage;
-			Number = ReadDblNumber();
-		}
-		return Number;
-	}
-
-	static double ReadDblNumber(string ErrorMessage = "Invalid Number, Enter again\n")
-	{
-		double Number;
-		while (!(cin >> Number)) {
-			cin.clear();
-			cin.ignore(numeric_limits<streamsize>::max(), '\n');
-			cout << ErrorMessage;
-		}
-		return Number;
-	}
-
-	static double ReadPositiveDblNumber(string ErrorMessage = "Invalid Number, Enter again\n")
-	{
-		double Number = 0;
-		Number = ReadDblNumber();
+		T Number = 0;
+		Number = ReadNumber();
 		while (Number <= 0)
 		{
 			cout << ErrorMessage;
 			cin >> Number;
-		}
-		return Number;
-	}
-	static double ReadDblNumberBetween(double From, double To, string ErrorMessage = "Number is not within range, Enter again:\n")
-	{
-		double Number = ReadDblNumber();
-
-		while (!IsNumberBetween(Number, From, To)) {
-			cout << ErrorMessage;
-			Number = ReadDblNumber();
 		}
 		return Number;
 	}
@@ -160,10 +84,12 @@ public:
 		return	clsDate::IsValidDate(Date);
 	}
 
-	static string ReadString()
+	static string ReadString(string Message = "")
 	{
 		string  S1 = "";
 		// Usage of std::ws will extract allthe whitespace character
+		if(Message != "")
+		cout << Message + ": ";
 		getline(cin >> ws, S1);
 		return S1;
 	}
@@ -190,13 +116,13 @@ public:
 		return  toupper(S1[0]);
 	}
 
-	static string ReadEmail()
+	static string ReadEmail(string Message = "Enter Email Address: ")
 	{
 		string email;
 
 		while (true)
 		{
-			cout << "Enter Email Address: ";
+			cout << Message;
 			cin >> email;
 
 			// Basic email pattern: something@something.something
@@ -212,13 +138,13 @@ public:
 	}
 
 	// ✅ Read and validate Phone Number
-	static string ReadPhone()
+	static string ReadPhone(string Message = "Enter Phone Number: ")
 	{
 		string phone;
 
 		while (true)
 		{
-			cout << "Enter Phone Number: ";
+			cout << Message;
 			cin >> phone;
 
 			// Accepts formats: 1234567890 / +1234567890 / 123-456-7890 / (123)456-7890
@@ -232,6 +158,7 @@ public:
 
 		return phone;
 	}
+
 };
 
-#endif // __CLSINPUTVALIDATE_H__
+
