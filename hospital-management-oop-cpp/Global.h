@@ -4,6 +4,11 @@
 #include <fstream>
 #include <iomanip>
 #include <algorithm>
+#include "clsString.h"
+#include "clsDate.h"
+#include "clsInputValidate.h"
+
+
 using namespace std;
 
 // File paths
