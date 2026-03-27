@@ -1,3 +1,6 @@
+#ifndef __GLOBAL_H__
+#define __GLOBAL_H__
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -15,3 +18,5 @@ using namespace std;
 const string PATIENTS_FILE = "Data/patients.txt";
 const string DOCTORS_FILE = "Data/doctors.txt";
 const string APPOINTMENTS_FILE = "Data/appointments.txt";
+
+#endif // __GLOBAL_H__

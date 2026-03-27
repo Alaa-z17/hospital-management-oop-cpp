@@ -1,5 +1,8 @@
+#ifndef __CLSDATE_H__
+#define __CLSDATE_H__
+
+
 #pragma warning(disable : 4996)
-#pragma once
 #include<iostream>
 #include<string>
 #include "clsString.h"
@@ -1155,3 +1158,4 @@ public:
 	}
 
 };
+#endif // __CLSDATE_H__

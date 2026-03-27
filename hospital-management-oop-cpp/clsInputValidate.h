@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __CLSINPUTVALIDATE_H__
+#define __CLSINPUTVALIDATE_H__
+
 #include <iostream>
 #include <string>
 #include "clsString.h"
@@ -232,3 +234,4 @@ public:
 	}
 };
 
+#endif // __CLSINPUTVALIDATE_H__
