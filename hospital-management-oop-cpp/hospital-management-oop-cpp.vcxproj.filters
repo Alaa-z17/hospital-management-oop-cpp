@@ -13,10 +13,129 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Libraries">
+      <UniqueIdentifier>{0f25cf65-5438-455c-a06b-39d15620cfe6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Business Layer">
+      <UniqueIdentifier>{f09210a6-7d10-4f18-a3a9-9491d57d18f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Data Layer">
+      <UniqueIdentifier>{23d6ed29-25b0-4b9c-84e9-054239112675}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Presentaion Layer %28screens%29">
+      <UniqueIdentifier>{7cf59470-b1dd-4092-a9a8-0ba3805f5fa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Presentaion Layer %28screens%29\PatientScreens">
+      <UniqueIdentifier>{aa596989-ba51-4e89-9513-a731d4cd5611}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Presentaion Layer %28screens%29\DoctorScreens">
+      <UniqueIdentifier>{82547c4d-03e0-4eea-b0f2-a75704f2d9b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Presentaion Layer %28screens%29\AppoinmentScreens">
+      <UniqueIdentifier>{0067faf5-de6b-454d-ae81-4bf6cc43d603}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="hospital-management-oop-cpp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Global.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DataStatics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Global.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clsString.h">
+      <Filter>Header Files\Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="clsDate.h">
+      <Filter>Header Files\Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="clsInputValidate.h">
+      <Filter>Header Files\Libraries</Filter>
+    </ClInclude>
+    <ClInclude Include="clsPerson.h">
+      <Filter>Header Files\Business Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="clsPatient.h">
+      <Filter>Header Files\Business Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="clsDoctor.h">
+      <Filter>Header Files\Business Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="clsAppointment.h">
+      <Filter>Header Files\Business Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="clsScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29</Filter>
+    </ClInclude>
+    <ClInclude Include="clsPatientData.h">
+      <Filter>Header Files\Data Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="clsAddPatientScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29\PatientScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsDeletePatientScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29\PatientScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsFindPatientScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29\PatientScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsListPatientsScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29\PatientScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsUpdatePatientScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29\PatientScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsDoctorData.h">
+      <Filter>Header Files\Data Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="clsListDoctorsScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29\DoctorScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsAddDoctorScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29\DoctorScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsDeleteDoctorScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29\DoctorScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsUpdateDoctorScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29\DoctorScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsFindDoctorScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29\DoctorScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsAppointmentData.h">
+      <Filter>Header Files\Data Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="clsListAppointmentsScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29\AppoinmentScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsAddAppointmentScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29\AppoinmentScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsCancelAppointmentScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29\AppoinmentScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsCompleteAppointmentScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29\AppoinmentScreens</Filter>
+    </ClInclude>
+    <ClInclude Include="clsMainScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29</Filter>
+    </ClInclude>
+    <ClInclude Include="clsDoctorsManagementScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29</Filter>
+    </ClInclude>
+    <ClInclude Include="clsPatientsManagementScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29</Filter>
+    </ClInclude>
+    <ClInclude Include="clsAppointmentsManagementScreen.h">
+      <Filter>Header Files\Presentaion Layer %28screens%29</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

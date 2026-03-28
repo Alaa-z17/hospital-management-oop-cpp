@@ -11,12 +11,14 @@
 #include "clsDate.h"
 #include "clsInputValidate.h"
 
-
 using namespace std;
 
 // File paths
-const string PATIENTS_FILE = "Data/patients.txt";
-const string DOCTORS_FILE = "Data/doctors.txt";
-const string APPOINTMENTS_FILE = "Data/appointments.txt";
+const string PATIENTS_FILE = "patients.txt";
+const string DOCTORS_FILE = "doctors.txt";
+const string APPOINTMENTS_FILE = "appointments.txt";
+
+// System boot function declaration; implementation is in Global.cpp
+void SystemBoot();
 
 #endif // __GLOBAL_H__

@@ -62,7 +62,4 @@ public:
     static int getTotalDoctors() { return _TotalDoctors; }
 };
 
-// Initialize static member
-int clsDoctor::_TotalDoctors = 0;
-
 #endif // __CLSDOCTOR_H__

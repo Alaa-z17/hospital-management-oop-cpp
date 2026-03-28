@@ -24,7 +24,7 @@ protected:
     {
         _clearScreen();
         cout << "\n===========================================" << endl;
-        cout << "  " << title << endl;
+        cout << "      " << title << endl;
         cout << "===========================================" << endl;
     }
 
@@ -41,7 +41,16 @@ protected:
     {
         string id;
         cout << "Enter Doctor ID: ";
-        getline(cin, id);
+        id = clsInputValidate<string>::ReadString();
+        return id;
+    }
+
+	//Appointment
+    static string _readAppointmentID()
+    {
+        string id;
+        cout << "Enter Appointment ID : ";
+        id = clsInputValidate<string>::ReadString();
         return id;
     }
 public:

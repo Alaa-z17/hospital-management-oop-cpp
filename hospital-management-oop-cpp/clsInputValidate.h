@@ -54,28 +54,14 @@ public:
 		return Number;
 	}
 
-	static T ReadNumberBetween(string Message = "Enter Number between: " + to_string(From) + " and " + to_string(To), T From, T To, string ErrorMessage = "Number is not within range, Enter again:\n")
+	static T ReadNumberBetween(T From, T To, string ErrorMessage = "Number is not within range, Enter again:\n")
 	{
-		if(Message != "")
-		cout << Message;
 		T Number = ReadNumber();
 
 		while (!IsNumberBetween(Number, From, To))
 		{
 			cout << ErrorMessage;
 			Number = ReadNumber();
-		}
-		return Number;
-	}
-
-	static T ReadPositiveNumber(string ErrorMessage = "Invalid Number, Enter again\n")
-	{
-		T Number = 0;
-		Number = ReadNumber();
-		while (Number <= 0)
-		{
-			cout << ErrorMessage;
-			cin >> Number;
 		}
 		return Number;
 	}
@@ -117,14 +103,13 @@ public:
 		return  toupper(S1[0]);
 	}
 
-	static string ReadEmail(string Message = "Enter Email Address: ")
+	static string ReadEmail()
 	{
 		string email;
 
 		while (true)
 		{
-			cout << Message;
-			cin >> email;
+			getline(cin >> ws, email);
 
 			// Basic email pattern: something@something.something
 			regex emailPattern(R"((\w+)(\.?\w+)*@(\w+)(\.(\w+))+)");
@@ -139,13 +124,12 @@ public:
 	}
 
 	// ✅ Read and validate Phone Number
-	static string ReadPhone(string Message = "Enter Phone Number: ")
+	static string ReadPhone()
 	{
 		string phone;
 
 		while (true)
 		{
-			cout << Message;
 			cin >> phone;
 
 			// Accepts formats: 1234567890 / +1234567890 / 123-456-7890 / (123)456-7890

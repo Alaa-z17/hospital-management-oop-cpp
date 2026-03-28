@@ -61,7 +61,4 @@ public:
     static int getTotalPatients() { return _TotalPatients; }
 };
 
-// Initialize static member
-int clsPatient::_TotalPatients = 0;
-
 #endif // __CLSPATIENT_H__

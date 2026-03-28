@@ -67,7 +67,7 @@ public:
 
     static int findDoctorIndex(const string& doctorID)
     {
-        for (size_t i = 0; i < _Doctors.size(); i++)
+        for (int i = 0; i < _Doctors.size(); i++)
         {
             if (_Doctors[i].getDoctorID() == doctorID)
                 return i;
@@ -112,8 +112,5 @@ public:
         return true;
     }
 };
-
-vector<clsDoctor> clsDoctorData::_Doctors;
-string clsDoctorData::_DoctorsFile = DOCTORS_FILE;
 
 #endif // __CLSDOCTORDATA_H__

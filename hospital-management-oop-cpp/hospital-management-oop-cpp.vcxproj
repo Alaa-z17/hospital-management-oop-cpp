@@ -127,7 +127,41 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DataStatics.cpp" />
+    <ClCompile Include="Global.cpp" />
     <ClCompile Include="hospital-management-oop-cpp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="clsAddAppointmentScreen.h" />
+    <ClInclude Include="clsAddDoctorScreen.h" />
+    <ClInclude Include="clsAddPatientScreen.h" />
+    <ClInclude Include="clsAppointment.h" />
+    <ClInclude Include="clsAppointmentData.h" />
+    <ClInclude Include="clsAppointmentsManagementScreen.h" />
+    <ClInclude Include="clsCancelAppointmentScreen.h" />
+    <ClInclude Include="clsCompleteAppointmentScreen.h" />
+    <ClInclude Include="clsDate.h" />
+    <ClInclude Include="clsDeleteDoctorScreen.h" />
+    <ClInclude Include="clsDeletePatientScreen.h" />
+    <ClInclude Include="clsDoctor.h" />
+    <ClInclude Include="clsDoctorData.h" />
+    <ClInclude Include="clsDoctorsManagementScreen.h" />
+    <ClInclude Include="clsFindDoctorScreen.h" />
+    <ClInclude Include="clsFindPatientScreen.h" />
+    <ClInclude Include="clsInputValidate.h" />
+    <ClInclude Include="clsListAppointmentsScreen.h" />
+    <ClInclude Include="clsListDoctorsScreen.h" />
+    <ClInclude Include="clsListPatientsScreen.h" />
+    <ClInclude Include="clsMainScreen.h" />
+    <ClInclude Include="clsPatient.h" />
+    <ClInclude Include="clsPatientData.h" />
+    <ClInclude Include="clsPatientsManagementScreen.h" />
+    <ClInclude Include="clsPerson.h" />
+    <ClInclude Include="clsScreen.h" />
+    <ClInclude Include="clsString.h" />
+    <ClInclude Include="clsUpdateDoctorScreen.h" />
+    <ClInclude Include="clsUpdatePatientScreen.h" />
+    <ClInclude Include="Global.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

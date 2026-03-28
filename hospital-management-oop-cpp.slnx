@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="hospital-management-oop-cpp/hospital-management-oop-cpp.vcxproj" />
+  <Project Path="hospital-management-oop-cpp/hospital-management-oop-cpp.vcxproj" Id="01e287d7-e04b-4179-9785-0e57ffdb562a" />
 </Solution>

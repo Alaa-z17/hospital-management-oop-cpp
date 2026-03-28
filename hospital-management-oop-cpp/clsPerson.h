@@ -79,6 +79,4 @@ public:
     virtual string getID() const = 0;
 };
 
-int clsPerson::_TotalPersons = 0;
-
 #endif // __CLSPERSON_H__

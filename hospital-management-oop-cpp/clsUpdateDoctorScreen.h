@@ -28,15 +28,17 @@ private:
             string lastName = clsInputValidate<string>::ReadString("Enter Last Name (current: " + doctor.getLastName() + "): ");
             if (!lastName.empty()) doctor.setLastName(lastName);
 
-            string phone = clsInputValidate<string>::ReadPhone("Enter Phone (current: " + doctor.getPhone() + "): ");
+            cout << "Enter Phone (current: " + doctor.getPhone() + "): ";
+            string phone = clsInputValidate<string>::ReadPhone();
             if (!phone.empty()) doctor.setPhone(phone);
 
-            string email = clsInputValidate<string>::ReadEmail("Enter Email (current: " + doctor.getEmail() + "): ");
+            cout << "Enter Email (current: " + doctor.getEmail() + "): ";
+            string email = clsInputValidate<string>::ReadEmail();
             if (!email.empty()) doctor.setEmail(email);
 
             string ageStr;
             cout << "Enter Age (current: " << doctor.getAge() << "): ";
-            ageStr = to_string(clsInputValidate<short>::ReadNumberBetween("", 0, 150));
+            ageStr = to_string(clsInputValidate<short>::ReadNumberBetween( 0, 150));
             if (!ageStr.empty()) doctor.setAge(stoi(ageStr));
 
             string specialization = clsInputValidate<string>::ReadString("Enter Specialization (current: " + doctor.getSpecialization() + "): ");
@@ -44,10 +46,11 @@ private:
 
             string feeStr;
             cout << "Enter Consultation Fee (current: " << doctor.getConsultationFee() << "): ";
-            feeStr = to_string(clsInputValidate<float>::ReadPositiveNumber());
+            feeStr = to_string(clsInputValidate<float>::ReadNumber());
             if (!feeStr.empty()) doctor.setConsultationFee(stof(feeStr));
             return doctor;
         }
+        return clsDoctor();
     }
 public:
     void show() override

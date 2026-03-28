@@ -16,13 +16,21 @@ private:
             cout << "Doctor ID already exists. Enter another ID: ";
             doctorID = clsInputValidate<string>::ReadString();
         }
+
         string firstName = clsInputValidate<string>::ReadString("Enter First Name: ");
         string lastName = clsInputValidate<string>::ReadString("Enter Last Name: ");
-        string phone = clsInputValidate<string>::ReadPhone("Enter Phone: ");
-        string email = clsInputValidate<string>::ReadEmail("Enter Email: ");
-        short age = clsInputValidate<short>::ReadNumberBetween("Enter Age: ", 0, 120);
+
+        cout << "Enter Phone: ";
+        string phone = clsInputValidate<string>::ReadPhone();
+        cout << "Enter Email: ";
+        string email = clsInputValidate<string>::ReadEmail();
+
+		cout << "Enter Age: ";
+        short age = clsInputValidate<short>::ReadNumberBetween(0, 120);
         string specialization = clsInputValidate<string>::ReadString("Enter Specialization: ");
-        float fee = clsInputValidate<float>::ReadNumberBetween("Enter Consultation Fee: ", 0, 10000);
+
+        cout << "Enter Consultation Fee: ";
+        float fee = clsInputValidate<float>::ReadNumberBetween(0, 10000);
         return clsDoctor(firstName, lastName, phone, email, age,
             doctorID, specialization, fee);
 	}

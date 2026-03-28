@@ -6,6 +6,7 @@
 #include<iostream>
 #include<string>
 #include "clsString.h"
+#include <regex>
 
 using namespace std;
 
@@ -29,11 +30,11 @@ public:
 		_Year = now->tm_year + 1900;
 	}
 
-	clsDate(string sDate)
+	clsDate(string sDate,string delim = "/")
 	{
 
 		vector <string> vDate;
-		vDate = clsString::Split(sDate, "/");
+		vDate = clsString::Split(sDate, delim);
 
 		_Day = stoi(vDate[0]);
 		_Month = stoi(vDate[1]);
@@ -110,6 +111,44 @@ public:
 	static	bool IsValidDate(clsDate Date)
 	{
 
+		if (Date.Day < 1 || Date.Day>31)
+			return false;
+
+		if (Date.Month < 1 || Date.Month>12)
+			return false;
+
+		if (Date.Month == 2)
+		{
+			if (isLeapYear(Date.Year))
+			{
+				if (Date.Day > 29)
+					return false;
+			}
+			else
+			{
+				if (Date.Day > 28)
+					return false;
+			}
+		}
+
+		short DaysInMonth = NumberOfDaysInAMonth(Date.Month, Date.Year);
+
+		if (Date.Day > DaysInMonth)
+			return false;
+
+		return true;
+
+	}
+
+	static	bool IsValidDate(string sDate,string delim ="-")
+	{
+		const regex datePatternDDMMYYYY(R"((0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-\d{4})");
+		if (!regex_match(sDate, datePatternDDMMYYYY))
+		{
+			return false;
+		}
+		
+		clsDate Date(sDate, "-");
 		if (Date.Day < 1 || Date.Day>31)
 			return false;
 

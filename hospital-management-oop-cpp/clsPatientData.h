@@ -75,7 +75,7 @@ public:
     // Find patient by ID
     static int findPatientIndex(const string& patientID)
     {
-        for (size_t i = 0; i < _Patients.size(); i++)
+        for (int i = 0; i < _Patients.size(); i++)
         {
             if (_Patients[i].getPatientID() == patientID)
                 return i;
@@ -124,9 +124,5 @@ public:
         return true;
     }
 };
-
-// Static member definitions
-vector<clsPatient> clsPatientData::_Patients;
-string clsPatientData::_PatientsFile = PATIENTS_FILE;
 
 #endif // __CLSPATIENTDATA_H__

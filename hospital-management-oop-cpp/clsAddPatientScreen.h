@@ -17,9 +17,15 @@ private:
         }
         string firstName = clsInputValidate<string>::ReadString("Enter First Name: ");
         string lastName = clsInputValidate<string>::ReadString("Enter Last Name: ");
-        string phone = clsInputValidate<string>::ReadPhone("Enter Phone: ");
-        string email = clsInputValidate<string>::ReadEmail("Enter Email: ");
-        short age = clsInputValidate<short>::ReadNumberBetween("Enter Age: ", 0, 120);
+      
+        cout << "Enter Phone: ";
+        string phone = clsInputValidate<string>::ReadPhone();
+        cout << "Enter Email: ";
+        string email = clsInputValidate<string>::ReadEmail();
+
+        cout << "Enter Age (0-120): ";
+        short age = clsInputValidate<short>::ReadNumberBetween(0, 120);
+
         string diagnosis = clsInputValidate<string>::ReadString("Enter Diagnosis: ");
         string bloodType = clsInputValidate<string>::ReadString("Enter Blood Type: ");
         return clsPatient(firstName, lastName, phone, email, age,
@@ -30,9 +36,6 @@ public:
     void show() override
     {
         _showHeader("Add New Patient");
-
-       
-        string bloodType = clsInputValidate<string>::ReadString("Enter Blood Type: ");
 
         clsPatient newPatient = _ReadPatientInfo();
 
