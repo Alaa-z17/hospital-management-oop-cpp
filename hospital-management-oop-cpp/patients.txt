@@ -1,2 +1,2 @@
-1|alaa|koko|989237623|al@mail.com|20|flue|A+
-2|alaa|meme|1023912309|ald@mail.com|20|the flue|+
+1|Alaa|katsha|09082232822|alaa@mail.com|20|the flue|O+
+2|Mohammad|koko2|098292800022|moh2@mail.com|21|the flue type2|B-
