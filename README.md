@@ -21,6 +21,7 @@ A complete Hospital Management System built with C++ demonstrating advanced OOP 
 
 ## 🧠 OOP Concepts Used
 
+```text
 |Concept | Implementation |
 |--------|----------------|
 
@@ -30,6 +31,7 @@ A complete Hospital Management System built with C++ demonstrating advanced OOP 
 | **Static Members** | Counters for total patients, doctors, appointments |
 | **File I/O** | Reading/writing data to text files |
 | **Vectors** | Store dynamic lists of objects |
+```
 
 ## 📁 Project Structure
 
