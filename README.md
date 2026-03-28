@@ -21,17 +21,14 @@ A complete Hospital Management System built with C++ demonstrating advanced OOP 
 
 ## 🧠 OOP Concepts Used
 
-```text
-|Concept | Implementation |
-|--------|----------------|
-
-| **Inheritance** | `clsPatient` and `clsDoctor` inherit from `clsPerson` |
-| **Polymorphism** | Virtual functions (`printInfo`, `getID`) |
-| **Encapsulation** | Private members with getters/setters |
-| **Static Members** | Counters for total patients, doctors, appointments |
-| **File I/O** | Reading/writing data to text files |
-| **Vectors** | Store dynamic lists of objects |
-```
+| Concept          | Implementation                                      |
+|------------------|-----------------------------------------------------|
+| Inheritance      | `clsPatient` and `clsDoctor` inherit from `clsPerson` |
+| Polymorphism     | Virtual functions (`printInfo`, `getID`)            |
+| Encapsulation    | Private members with getters/setters                |
+| Static Members   | Counters for total patients, doctors, appointments  |
+| File I/O         | Reading/writing data to text files                  |
+| Vectors          | Store dynamic lists of objects                      |
 
 ## 📁 Project Structure
 
